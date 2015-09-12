@@ -1,0 +1,7 @@
+household_power_consumption <- read.csv("household_power_consumption.txt", sep=";")
+View(household_power_consumption)
+class(household_power_consumption$Global_active_power)
+household_power_consumption$Global_active_power<-as.numeric(household_power_consumption$Global_active_power)
+class(household_power_consumption$Global_active_power)
+hist(household_power_consumption$Global_active_power, col = "red", main = paste("Global Active Power"), xlab = "Global Active Power (kilowatts)")
+
